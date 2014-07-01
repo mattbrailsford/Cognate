@@ -198,7 +198,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Web\UI\App_Plugins\Cognate\Dummy.txt" />
+    <None Include="Web\UI\App_Plugins\Cognate\package.manifest" />
+    <Content Include="Web\UI\App_Plugins\Cognate\Js\cognate.alert.js" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
