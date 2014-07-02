@@ -26,7 +26,11 @@
 	<DictionaryItems />
 	<Languages />
 	<DataTypes />
-	<Actions />
+	<Actions>
+		<Action runat="install" undo="true" alias="Cognate_AddScheduledTask" 
+			scheduledTaskAlias="cognate" interval="60" url="/umbraco/cognate/scheduledtask/run" log="true">
+		</Action>
+	</Actions>
 
 	<control />
 

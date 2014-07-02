@@ -191,11 +191,14 @@
   <ItemGroup>
     <Compile Include="Boostrapper.cs" />
     <Compile Include="Data\Repositories\AbstractRepository.cs" />
-    <Compile Include="Data\Repositories\TestScoreRepository.cs" />
+    <Compile Include="Data\Repositories\TestVariantScoreRepository.cs" />
     <Compile Include="Extensions\TypeExtensions.cs" />
     <Compile Include="Models\Entity.cs" />
-    <Compile Include="Models\TestScore.cs" />
+    <Compile Include="Models\TestVariantScore.cs" />
+    <Compile Include="PackageActions\AddScheduledTask.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\XmlUtil.cs" />
+    <Compile Include="Web\Controllers\Api\ScheduledTaskController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Web\UI\App_Plugins\Cognate\package.manifest" />
@@ -213,6 +216,21 @@
     </PropertyGroup>
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
   </Target>
+  <PropertyGroup>
+    <PostBuildEvent>
+REM #################################################
+
+REM # Copy files
+
+REM #################################################
+
+
+IF NOT "$(SolutionDir)" == "*Undefined*" (
+xcopy /s /y "$(TargetPath)" "C:\Users\Matt\Work\Sandbox\Umbraco\UmbracoCms.7.1.4\bin"
+xcopy /s /y "$(TargetDir)Cognate.pdb" "C:\Users\Matt\Work\Sandbox\Umbraco\UmbracoCms.7.1.4\bin"
+xcopy /s /y "$(ProjectDir)Web\UI\*" "C:\Users\Matt\Work\Sandbox\Umbraco\UmbracoCms.7.1.4"
+)</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

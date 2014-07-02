@@ -3,11 +3,11 @@ using System.Web;
 using Cognate.Data.Repositories;
 using Cognate.Models;
 
-[assembly: PreApplicationStartMethod(typeof(TestScoreRepository), "Initialize")]
+[assembly: PreApplicationStartMethod(typeof(TestVariantScoreRepositoryHelper), "Initialize")]
 
 namespace Cognate.Data.Repositories
 {
-	internal class TestScoreRepository : AbstractRepository<TestScore>
+	internal class TestVariantScoreRepository : AbstractRepository<TestVariantScore>
 	{
 		public int GetScore(int testId, int variantId)
 		{
@@ -33,7 +33,7 @@ namespace Cognate.Data.Repositories
 			}
 			else
 			{
-				testScore = new TestScore
+				testScore = new TestVariantScore
 				{
 					TestId = testId,
 					VariantId = variantId,
@@ -46,7 +46,7 @@ namespace Cognate.Data.Repositories
 			return testScore.Score;
 		}
 
-		public int GetTotal(int testId)
+		public int GetTestTotal(int testId)
 		{
 			return All().Where(x => x.TestId == testId).Sum(x => x.Score);
 		}
@@ -58,10 +58,13 @@ namespace Cognate.Data.Repositories
 				.Select(x => x.VariantId)
 				.FirstOrDefault();
 		}
+	}
 
+	public class TestVariantScoreRepositoryHelper
+	{
 		public static void Initialize()
 		{
-			new TestScoreRepository().EnsureDatabaseTable();
+			new TestVariantScoreRepository().EnsureDatabaseTable();
 		}
 	}
 }
