@@ -190,13 +190,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Boostrapper.cs" />
+    <Compile Include="Cache\CacheManager.cs" />
+    <Compile Include="CognateContext.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Data\DataManager.cs" />
     <Compile Include="Data\Repositories\AbstractRepository.cs" />
     <Compile Include="Data\Repositories\TestVariantScoreRepository.cs" />
+    <Compile Include="Extensions\PublishedContentExtensions.cs" />
     <Compile Include="Extensions\TypeExtensions.cs" />
     <Compile Include="Models\Entity.cs" />
+    <Compile Include="Models\Test.cs" />
     <Compile Include="Models\TestVariantScore.cs" />
     <Compile Include="PackageActions\AddScheduledTask.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Routing\RouteHandler.cs" />
+    <Compile Include="Services\TestService.cs" />
     <Compile Include="Util\XmlUtil.cs" />
     <Compile Include="Web\Controllers\Api\ScheduledTaskController.cs" />
   </ItemGroup>
