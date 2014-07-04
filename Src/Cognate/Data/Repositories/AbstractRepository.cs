@@ -16,7 +16,7 @@ namespace Cognate.Data.Repositories
 			get { return ApplicationContext.Current.DatabaseContext.Database; }
 		}
 
-		public virtual TEntity Get(int id)
+		public virtual TEntity Get(long id)
 		{
 			return Db.SingleOrDefault<TEntity>(id);
 		}
@@ -32,7 +32,7 @@ namespace Cognate.Data.Repositories
 			Db.Save(entity);
 		}
 
-		public virtual void Delete(int id)
+		public virtual void Delete(long id)
 		{
 			Db.Delete(typeof(TEntity).GetTableName(),
 				typeof(TEntity).GetPrimaryKeyName(),

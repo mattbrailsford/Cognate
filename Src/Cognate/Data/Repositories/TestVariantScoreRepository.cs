@@ -22,7 +22,7 @@ namespace Cognate.Data.Repositories
 			return 0;
 		}
 
-		public int IncrementScore(int testId, int variantId)
+		public int IncrementScore(long testId, int variantId)
 		{
 			var testScore = All()
 				.SingleOrDefault(x => x.TestId == testId && x.VariantId == variantId);

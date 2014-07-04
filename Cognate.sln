@@ -18,6 +18,27 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{2B9EEDE7
 		Package.xml = Package.xml
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "UmbracoCms.7.1.4", "http://localhost:55610", "{5C0B734C-1103-4E2D-AEDF-13467A41FB1B}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_55610"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\Sandbox\Umbraco\UmbracoCms.7.1.4\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55610\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_55610"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\Sandbox\Umbraco\UmbracoCms.7.1.4\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55610\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\..\..\Sandbox\Umbraco\UmbracoCms.7.1.4\"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +49,8 @@ Global
 		{51B39976-6B54-469E-AA40-DBBC4B37B123}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51B39976-6B54-469E-AA40-DBBC4B37B123}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51B39976-6B54-469E-AA40-DBBC4B37B123}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C0B734C-1103-4E2D-AEDF-13467A41FB1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C0B734C-1103-4E2D-AEDF-13467A41FB1B}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
